@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 public class Grid : MonoBehaviour
 {
+    private static int points;
+
     // The Grid itself
     public static int w = 10;
     public static int h = 20;
@@ -23,6 +25,11 @@ public class Grid : MonoBehaviour
                 deleteRow(y);
                 decreaseRowsAbove(y + 1);
                 --y;
+                points++;
+                GameObject _canvas = GameObject.Find("Canvas");
+                Text _childText = _canvas.transform.FindChild("Points_Text").GetComponent<Text>();
+                _childText.text = "Points: " + points;
+                Debug.Log("Points: " + points);
             }
         }
     }
