@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using uFrame.Attributes;
 
-public class Grid : MonoBehaviour
+[ActionLibrary, uFrameCategory("grid")]
+public static class Grid
 {
     private static int points;
 
@@ -45,7 +47,7 @@ public class Grid : MonoBehaviour
     {
         for (int x = 0; x < w; ++x)
         {
-            Destroy(grid[x, y].gameObject);
+            GameObject.Destroy(grid[x, y].gameObject);
             grid[x, y] = null;
         }
     }

@@ -1,25 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections;
+using uFrame.Attributes;
 
-public class Spawner : MonoBehaviour
+[ActionLibrary, uFrameCategory("spawner")]
+public static class Spawner
 {
     // Groups
-    public GameObject[] groups;
+    public static GameObject[] groups;
 
-    void Start()
-    {
-        // Spawn initial Group
-        spawnNext();
-    }
-
-    public void spawnNext()
+    public static void spawnNext(Vector3 position)
     {
         // Random Index
         int i = Random.Range(0, groups.Length);
 
         // Spawn Group at current Position
-        Instantiate(groups[i],
-                    transform.position,
+        GameObject.Instantiate(groups[i],
+                    position,
                     Quaternion.identity);
     }
 }
