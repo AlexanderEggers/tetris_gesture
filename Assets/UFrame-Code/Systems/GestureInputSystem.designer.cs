@@ -20,7 +20,7 @@ namespace TetrisDB {
     using UnityEngine;
     
     
-    public partial class GestureInputSystemBase : uFrame.ECS.EcsSystem, uFrame.ECS.ISystemUpdate {
+    public partial class GestureInputSystemBase : uFrame.ECS.EcsSystem {
         
         private IEcsComponentManagerOf<GroupComponent> _GroupComponentManager;
         
@@ -50,20 +50,6 @@ namespace TetrisDB {
             SpawnComponentManager = ComponentSystem.RegisterComponent<SpawnComponent>(1);
             this.OnEvent<uFrame.Kernel.GameReadyEvent>().Subscribe(_=>{ GestureInputSystemGameReadyFilter(_); }).DisposeWith(this);
             this.OnEvent<TetrisDB.GestureUpdateEvent>().Subscribe(_=>{ GestureInputSystemGestureUpdateEventFilter(_); }).DisposeWith(this);
-        }
-        
-        protected virtual void GestureInputSystemUpdateHandler() {
-            var handler = new GestureInputSystemUpdateHandler();
-            handler.System = this;
-            StartCoroutine(handler.Execute());
-        }
-        
-        protected void GestureInputSystemUpdateFilter() {
-            this.GestureInputSystemUpdateHandler();
-        }
-        
-        public virtual void SystemUpdate() {
-            GestureInputSystemUpdateFilter();
         }
         
         protected virtual void GestureInputSystemGameReadyHandler(uFrame.Kernel.GameReadyEvent data) {
