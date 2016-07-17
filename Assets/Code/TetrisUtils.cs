@@ -51,6 +51,19 @@ public static class TetrisUtils {
             component.transform.position += new Vector3(-1, 0, 0);
     }
 
+    public static void TryRotate(GroupComponent component)
+    {
+        component.transform.Rotate(0, 0, -90);
+
+        // See if valid
+        if (isValidGridPos(component))
+            // It's valid. Update grid.
+            updateGrid(component);
+        else
+            // It's not valid. revert.
+            component.transform.Rotate(0, 0, 90);
+    }
+
     private static void updateGrid(GroupComponent component)
     {
         // Remove old children from grid

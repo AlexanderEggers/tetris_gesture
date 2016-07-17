@@ -1,8 +1,0 @@
-{
-	"Identifier":"e5589d43-825b-421e-a4cc-c1ba8741b673"	, 
-	"Time":"7/17/2016 9:31:23 PM"	, 
-	"Group":213123	, 
-	"DataRecordId":"812490c7-61ef-451f-8850-56802aae99b8"	, 
-	"Type":1	, 
-	"RecordType":"Invert.uFrame.ECS.ActionNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"MetaType\":\"TetrisUtils.Update\"\t, \r\n\t\"VariableName\":\"ActionNode31\"\t, \r\n\t\"Name\":\"NewActionNode_Copy\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"812490c7-61ef-451f-8850-56802aae99b8\"\t, \r\n\t\"Expanded\":false}\r\n"}

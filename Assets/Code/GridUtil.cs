@@ -26,9 +26,9 @@ public class GridUtil
                 decreaseRowsAbove(y + 1);
                 --y;
                 points++;
-                GameObject _canvas = GameObject.Find("Canvas");
-                Text _childText = _canvas.transform.FindChild("Points_Text").GetComponent<Text>();
-                _childText.text = "Points: " + points;
+                //GameObject _canvas = GameObject.Find("Canvas");
+                //Text _childText = _canvas.transform.FindChild("Points_Text").GetComponent<Text>();
+                //_childText.text = "Points: " + points;
                 Debug.Log("Points: " + points);
             }
         }
