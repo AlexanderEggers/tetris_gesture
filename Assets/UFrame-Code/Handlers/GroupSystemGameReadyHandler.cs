@@ -46,7 +46,7 @@ namespace TetrisDB {
         
         public virtual System.Collections.IEnumerator Execute() {
             // PublishEventNode
-            while (this.DebugInfo("e3f5e492-b904-4a14-8c5a-b773be0bbca3","cd61b2c4-389e-4936-bd8e-cd6af0ea41c0", this) == 1) yield return null;
+            while (this.DebugInfo("bdfb8aaf-0d1c-4d8a-b0c3-60e35353a182","cd61b2c4-389e-4936-bd8e-cd6af0ea41c0", this) == 1) yield return null;
             var PublishEventNode26_Event = new GroupMoveEvent();
             System.Publish(PublishEventNode26_Event);
             PublishEventNode26_Result = PublishEventNode26_Event;

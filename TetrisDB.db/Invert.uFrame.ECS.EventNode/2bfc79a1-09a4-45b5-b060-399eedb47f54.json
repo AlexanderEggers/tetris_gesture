@@ -1,6 +1,6 @@
 {
 	"EventId":3	, 
-	"Name":"ActiveGroupMoveRight"	, 
+	"Name":"ActiveGroupMoveRightEvent"	, 
 	"Order":0	, 
 	"GraphId":"95814f79-b327-4885-bbc5-55d74445e968"	, 
 	"Identifier":"2bfc79a1-09a4-45b5-b060-399eedb47f54"	, 

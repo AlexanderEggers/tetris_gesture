@@ -49,6 +49,8 @@ namespace TetrisDB {
             GroupComponentManager = ComponentSystem.RegisterComponent<GroupComponent>(3);
             SpawnComponentManager = ComponentSystem.RegisterComponent<SpawnComponent>(1);
             this.OnEvent<TetrisDB.GroupMoveEvent>().Subscribe(_=>{ GroupSystemGroupMoveEventPublisherFilter(_); }).DisposeWith(this);
+            this.OnEvent<TetrisDB.ActiveGroupMoveRightEvent>().Subscribe(_=>{ GroupSystemActiveGroupMoveRightEventFilter(_); }).DisposeWith(this);
+            this.OnEvent<TetrisDB.ActiveGroupMoveLeftEvent>().Subscribe(_=>{ GroupSystemActiveGroupMoveLeftEventFilter(_); }).DisposeWith(this);
             this.OnEvent<uFrame.Kernel.GameReadyEvent>().Subscribe(_=>{ GroupSystemGameReadyFilter(_); }).DisposeWith(this);
             this.OnEvent<TetrisDB.GroupMoveEvent>().Subscribe(_=>{ GroupSystemGroupMoveEventFilter(_); }).DisposeWith(this);
         }
@@ -62,6 +64,46 @@ namespace TetrisDB {
         
         protected void GroupSystemGroupMoveEventPublisherFilter(TetrisDB.GroupMoveEvent data) {
             this.GroupSystemGroupMoveEventPublisherHandler(data);
+        }
+        
+        protected virtual void GroupSystemActiveGroupMoveRightEventHandler(TetrisDB.ActiveGroupMoveRightEvent data, GroupComponent group) {
+            var handler = new GroupSystemActiveGroupMoveRightEventHandler();
+            handler.System = this;
+            handler.Event = data;
+            handler.Group = group;
+            StartCoroutine(handler.Execute());
+        }
+        
+        protected void GroupSystemActiveGroupMoveRightEventFilter(TetrisDB.ActiveGroupMoveRightEvent data) {
+            var GroupComponentItems = GroupComponentManager.Components;
+            for (var GroupComponentIndex = 0
+            ; GroupComponentIndex < GroupComponentItems.Count; GroupComponentIndex++
+            ) {
+                if (!GroupComponentItems[GroupComponentIndex].Enabled) {
+                    continue;
+                }
+                this.GroupSystemActiveGroupMoveRightEventHandler(data, GroupComponentItems[GroupComponentIndex]);
+            }
+        }
+        
+        protected virtual void GroupSystemActiveGroupMoveLeftEventHandler(TetrisDB.ActiveGroupMoveLeftEvent data, GroupComponent group) {
+            var handler = new GroupSystemActiveGroupMoveLeftEventHandler();
+            handler.System = this;
+            handler.Event = data;
+            handler.Group = group;
+            StartCoroutine(handler.Execute());
+        }
+        
+        protected void GroupSystemActiveGroupMoveLeftEventFilter(TetrisDB.ActiveGroupMoveLeftEvent data) {
+            var GroupComponentItems = GroupComponentManager.Components;
+            for (var GroupComponentIndex = 0
+            ; GroupComponentIndex < GroupComponentItems.Count; GroupComponentIndex++
+            ) {
+                if (!GroupComponentItems[GroupComponentIndex].Enabled) {
+                    continue;
+                }
+                this.GroupSystemActiveGroupMoveLeftEventHandler(data, GroupComponentItems[GroupComponentIndex]);
+            }
         }
         
         protected virtual void GroupSystemGameReadyHandler(uFrame.Kernel.GameReadyEvent data) {

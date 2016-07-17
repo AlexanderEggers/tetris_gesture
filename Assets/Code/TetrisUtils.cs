@@ -25,6 +25,32 @@ public static class TetrisUtils {
         no.Invoke();
     }
 
+    public static void TryMoveLeft(GroupComponent component)
+    {
+        component.transform.position += new Vector3(-1, 0, 0);
+
+        // See if valid
+        if (isValidGridPos(component))
+            // It's valid. Update grid.
+            updateGrid(component);
+        else
+            // It's not valid. revert.
+            component.transform.position += new Vector3(1, 0, 0);
+    }
+
+    public static void TryMoveRight(GroupComponent component)
+    {
+        component.transform.position += new Vector3(1, 0, 0);
+
+        // See if valid
+        if (isValidGridPos(component))
+            // It's valid. Update grid.
+            updateGrid(component);
+        else
+            // It's not valid. revert.
+            component.transform.position += new Vector3(-1, 0, 0);
+    }
+
     private static void updateGrid(GroupComponent component)
     {
         // Remove old children from grid
