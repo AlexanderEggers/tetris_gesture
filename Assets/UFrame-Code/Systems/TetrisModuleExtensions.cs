@@ -30,8 +30,22 @@ static
         
         #region 
 static
+        public uFrame.ECS.IEcsComponentManagerOf<GroupComponent> GroupComponentManager(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<GroupComponent>();
+        }
+        #endregion
+        
+        #region 
+static
         public List<SpawnComponent> SpawnComponentComponents(this uFrame.ECS.IEcsSystem system) {
             return system.ComponentSystem.RegisterComponent<SpawnComponent>().Components;
+        }
+        #endregion
+        
+        #region 
+static
+        public List<GroupComponent> GroupComponentComponents(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<GroupComponent>().Components;
         }
         #endregion
     }

@@ -1,0 +1,8 @@
+{
+	"Identifier":"62623e6d-2ba1-4a21-afc6-39c3b4b7332b"	, 
+	"Time":"7/17/2016 9:08:57 PM"	, 
+	"Group":21857	, 
+	"DataRecordId":"e3f5e492-b904-4a14-8c5a-b773be0bbca3"	, 
+	"Type":2	, 
+	"RecordType":"Invert.uFrame.ECS.PublishEventNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
+	"Data":"{\r\n\t\"VariableName\":\"PublishEventNode34\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"e3f5e492-b904-4a14-8c5a-b773be0bbca3\"\t, \r\n\t\"Expanded\":false}\r\n"}

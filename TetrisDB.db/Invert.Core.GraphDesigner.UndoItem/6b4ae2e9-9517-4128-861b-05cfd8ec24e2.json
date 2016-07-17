@@ -1,8 +1,0 @@
-{
-	"Identifier":"6b4ae2e9-9517-4128-861b-05cfd8ec24e2"	, 
-	"Time":"7/17/2016 5:22:02 PM"	, 
-	"Group":17222	, 
-	"DataRecordId":"9a0b685e-cfe1-487b-b0c4-d5c25c1c4f38"	, 
-	"Type":1	, 
-	"RecordType":"Invert.uFrame.ECS.ActionNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"MetaType\":\"GameObjectUtil.getRandomGameObject\"\t, \r\n\t\"VariableName\":\"ActionNode18\"\t, \r\n\t\"Name\":\"NewActionNode\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"9a0b685e-cfe1-487b-b0c4-d5c25c1c4f38\"\t, \r\n\t\"Expanded\":false}\r\n"}

@@ -22,7 +22,18 @@ namespace TetrisDB {
     
     public partial class SpawnEventBase : uFrame.ECS.EcsSystem {
         
+        private IEcsComponentManagerOf<GroupComponent> _GroupComponentManager;
+        
         private IEcsComponentManagerOf<SpawnComponent> _SpawnComponentManager;
+        
+        public IEcsComponentManagerOf<GroupComponent> GroupComponentManager {
+            get {
+                return _GroupComponentManager;
+            }
+            set {
+                _GroupComponentManager = value;
+            }
+        }
         
         public IEcsComponentManagerOf<SpawnComponent> SpawnComponentManager {
             get {
@@ -35,6 +46,7 @@ namespace TetrisDB {
         
         public override void Setup() {
             base.Setup();
+            GroupComponentManager = ComponentSystem.RegisterComponent<GroupComponent>(3);
             SpawnComponentManager = ComponentSystem.RegisterComponent<SpawnComponent>(1);
             this.OnEvent<TetrisDB.GroupShouldSpawnEvent>().Subscribe(_=>{ SpawnEventGroupShouldSpawnEventFilter(_); }).DisposeWith(this);
             this.OnEvent<uFrame.Kernel.GameReadyEvent>().Subscribe(_=>{ SpawnEventGameReadyFilter(_); }).DisposeWith(this);

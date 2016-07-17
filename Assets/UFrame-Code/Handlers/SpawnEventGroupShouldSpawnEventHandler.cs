@@ -26,16 +26,6 @@ namespace TetrisDB {
         
         private uFrame.ECS.EcsSystem _System;
         
-        private int ActionNode3_Minutes = default( System.Int32 );
-        
-        private int ActionNode3_Seconds = default( System.Int32 );
-        
-        private int IntNode4 = 0;
-        
-        private uFrame.Actions.Timer ActionNode3 = new uFrame.Actions.Timer();
-        
-        private TetrisDB.GroupShouldSpawnEvent PublishEventNode5_Result = default( TetrisDB.GroupShouldSpawnEvent );
-        
         private UnityEngine.GameObject ActionNode21_Result = default( UnityEngine.GameObject );
         
         private UnityEngine.GameObject ActionNode6_gameObject = default( UnityEngine.GameObject );
@@ -45,10 +35,6 @@ namespace TetrisDB {
         private UnityEngine.Vector3 ActionNode6_rotation = default( UnityEngine.Vector3 );
         
         private UnityEngine.GameObject ActionNode6_Result = default( UnityEngine.GameObject );
-        
-        private object ActionNode8_message = default( System.Object );
-        
-        private string StringNode9 = "Group Log";
         
         public TetrisDB.GroupShouldSpawnEvent Event {
             get {
@@ -69,16 +55,8 @@ namespace TetrisDB {
         }
         
         public virtual System.Collections.IEnumerator Execute() {
-            ActionNode3_Seconds = IntNode4;
             // ActionNode
-            while (this.DebugInfo("","76b9ac86-5c73-4224-ac25-1fa261388ed0", this) == 1) yield return null;
-            // Visit uFrame.Actions.Timer
-            ActionNode3.Seconds = ActionNode3_Seconds;
-            ActionNode3.System = System;
-            ActionNode3.Complete = ()=> { System.StartCoroutine(ActionNode3_Complete()); };
-            ActionNode3.Execute();
-            // ActionNode
-            while (this.DebugInfo("2f592c78-6faf-4b8e-a919-b406957124a2","f7005e05-d0d9-4d94-b9aa-919b1ffd9b8e", this) == 1) yield return null;
+            while (this.DebugInfo("3dbfd24a-fcdb-47eb-bd5c-08b10531dc5d","f7005e05-d0d9-4d94-b9aa-919b1ffd9b8e", this) == 1) yield return null;
             // Visit GameObjectUtil.getRandomGameObject
             ActionNode21_Result = GameObjectUtil.getRandomGameObject();
             ActionNode6_gameObject = ActionNode21_Result;
@@ -88,20 +66,6 @@ namespace TetrisDB {
             while (this.DebugInfo("f7005e05-d0d9-4d94-b9aa-919b1ffd9b8e","291ffeaa-dbda-403c-b412-a656b50143bf", this) == 1) yield return null;
             // Visit uFrame.Actions.GameObjects.Instantiate
             ActionNode6_Result = uFrame.Actions.GameObjects.Instantiate(ActionNode6_gameObject, ActionNode6_position, ActionNode6_rotation);
-            ActionNode8_message = StringNode9;
-            // ActionNode
-            while (this.DebugInfo("291ffeaa-dbda-403c-b412-a656b50143bf","53c5726b-a1c3-4fc1-adbe-292134903d99", this) == 1) yield return null;
-            // Visit uFrame.Actions.DebugLibrary.LogMessage
-            uFrame.Actions.DebugLibrary.LogMessage(ActionNode8_message);
-            yield break;
-        }
-        
-        private System.Collections.IEnumerator ActionNode3_Complete() {
-            // PublishEventNode
-            while (this.DebugInfo("76b9ac86-5c73-4224-ac25-1fa261388ed0","2f592c78-6faf-4b8e-a919-b406957124a2", this) == 1) yield return null;
-            var PublishEventNode5_Event = new GroupShouldSpawnEvent();
-            System.Publish(PublishEventNode5_Event);
-            PublishEventNode5_Result = PublishEventNode5_Event;
             yield break;
         }
     }
