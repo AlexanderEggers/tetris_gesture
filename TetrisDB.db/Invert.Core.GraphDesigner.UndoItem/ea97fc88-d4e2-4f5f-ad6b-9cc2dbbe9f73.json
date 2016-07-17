@@ -1,8 +1,0 @@
-{
-	"Identifier":"ea97fc88-d4e2-4f5f-ad6b-9cc2dbbe9f73"	, 
-	"Time":"7/17/2016 9:36:22 PM"	, 
-	"Group":213622	, 
-	"DataRecordId":"aec7e0d2-50fc-4fc5-82de-67f1cecfdaa0"	, 
-	"Type":2	, 
-	"RecordType":"Invert.uFrame.ECS.ActionNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"MetaType\":\"TetrisUtils.TryRotate\"\t, \r\n\t\"VariableName\":\"ActionNode66\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"aec7e0d2-50fc-4fc5-82de-67f1cecfdaa0\"\t, \r\n\t\"Expanded\":false}\r\n"}

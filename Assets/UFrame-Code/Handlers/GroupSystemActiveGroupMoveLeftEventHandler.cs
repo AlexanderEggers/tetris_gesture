@@ -31,6 +31,10 @@ namespace TetrisDB {
         
         private TetrisDB.GroupComponent ActionNode55_component = default( TetrisDB.GroupComponent );
         
+        private object ActionNode88_message = default( System.Object );
+        
+        private string StringNode89 = "move left";
+        
         public TetrisDB.ActiveGroupMoveLeftEvent Event {
             get {
                 return _Event;
@@ -55,6 +59,11 @@ namespace TetrisDB {
             while (this.DebugInfo("291ffeaa-dbda-403c-b412-a656b50143bf","71d4a479-701a-4b9a-8af4-7c24abc004f9", this) == 1) yield return null;
             // Visit uFrame.Actions.Comparisons.IsTrue
             uFrame.Actions.Comparisons.IsTrue(ActionNode58_value, ()=> { System.StartCoroutine(ActionNode58_yes()); }, ()=> { System.StartCoroutine(ActionNode58_no()); });
+            ActionNode88_message = StringNode89;
+            // ActionNode
+            while (this.DebugInfo("e0863a58-8265-4f28-a213-98429cdb65bc","47a3ddfd-a596-4bbc-a393-65247444076c", this) == 1) yield return null;
+            // Visit uFrame.Actions.DebugLibrary.LogMessage
+            uFrame.Actions.DebugLibrary.LogMessage(ActionNode88_message);
             yield break;
         }
         

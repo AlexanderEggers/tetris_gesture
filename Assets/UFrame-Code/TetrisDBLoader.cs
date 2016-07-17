@@ -21,6 +21,7 @@ namespace TetrisDB {
         
         public override void Load() {
             EcsSystem system = null;
+            system = this.AddSystem<GestureInputSystem>();
             system = this.AddSystem<SpawnEvent>();
             system = this.AddSystem<InputSystem>();
             system = this.AddSystem<GroupSystem>();
