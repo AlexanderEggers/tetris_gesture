@@ -52,7 +52,7 @@ namespace TetrisDB {
         public virtual System.Collections.IEnumerator Execute() {
             ActionNode59_value = Group.isActive;
             // ActionNode
-            while (this.DebugInfo("d4ff7afc-1470-468b-9368-2b995ecd3bae","c106d901-8085-4995-8e51-1204e30ca6bd", this) == 1) yield return null;
+            while (this.DebugInfo("122fe647-8507-4148-a878-4d8671376ddc","c106d901-8085-4995-8e51-1204e30ca6bd", this) == 1) yield return null;
             // Visit uFrame.Actions.Comparisons.IsTrue
             uFrame.Actions.Comparisons.IsTrue(ActionNode59_value, ()=> { System.StartCoroutine(ActionNode59_yes()); }, ()=> { System.StartCoroutine(ActionNode59_no()); });
             yield break;

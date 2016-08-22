@@ -34,9 +34,9 @@ namespace TetrisDB {
         
         private bool ActionNode70_index = default( System.Boolean );
         
-        private bool BoolNode72 = false;
-        
         private bool ActionNode70_middle = default( System.Boolean );
+        
+        private bool BoolNode72 = false;
         
         private bool ActionNode70_fourth = default( System.Boolean );
         
@@ -45,6 +45,48 @@ namespace TetrisDB {
         private object ActionNode94_key = default( System.Object );
         
         private int IntNode91 = 1;
+        
+        private bool ActionNode94_thumb = default( System.Boolean );
+        
+        private bool ActionNode94_index = default( System.Boolean );
+        
+        private bool ActionNode94_middle = default( System.Boolean );
+        
+        private bool ActionNode94_fourth = default( System.Boolean );
+        
+        private bool ActionNode94_fifth = default( System.Boolean );
+        
+        private object ActionNode94_key = default( System.Object );
+        
+        private int IntNode98 = 2;
+        
+        private bool ActionNode94_thumb = default( System.Boolean );
+        
+        private bool ActionNode94_index = default( System.Boolean );
+        
+        private bool ActionNode94_middle = default( System.Boolean );
+        
+        private bool ActionNode94_fourth = default( System.Boolean );
+        
+        private bool ActionNode94_fifth = default( System.Boolean );
+        
+        private object ActionNode94_key = default( System.Object );
+        
+        private int IntNode99 = 3;
+        
+        private bool ActionNode94_thumb = default( System.Boolean );
+        
+        private bool ActionNode94_index = default( System.Boolean );
+        
+        private bool ActionNode94_middle = default( System.Boolean );
+        
+        private bool ActionNode94_fourth = default( System.Boolean );
+        
+        private bool ActionNode94_fifth = default( System.Boolean );
+        
+        private object ActionNode94_key = default( System.Object );
+        
+        private int IntNode100 = 4;
         
         private bool ActionNode94_thumb = default( System.Boolean );
         
@@ -79,7 +121,7 @@ namespace TetrisDB {
         public virtual System.Collections.IEnumerator Execute() {
             ActionNode70_key = IntNode73;
             ActionNode70_thumb = BoolNode71;
-            ActionNode70_index = BoolNode72;
+            ActionNode70_index = BoolNode71;
             ActionNode70_middle = BoolNode72;
             ActionNode70_fourth = BoolNode72;
             ActionNode70_fifth = BoolNode72;
@@ -90,15 +132,45 @@ namespace TetrisDB {
             ActionNode94_key = IntNode91;
             ActionNode94_thumb = BoolNode71;
             ActionNode94_index = BoolNode71;
-            ActionNode94_middle = BoolNode72;
+            ActionNode94_middle = BoolNode71;
             ActionNode94_fourth = BoolNode72;
             ActionNode94_fifth = BoolNode72;
             // ActionNode
             while (this.DebugInfo("67b36efb-ac9d-427e-9d9c-512ac104e0cd","c8c0d4ea-6be1-4006-8d4c-bb543da69e05", this) == 1) yield return null;
             // Visit GestureUtils.registerGesture
             GestureUtils.registerGesture(ActionNode94_key, ActionNode94_thumb, ActionNode94_index, ActionNode94_middle, ActionNode94_fourth, ActionNode94_fifth);
+            ActionNode94_key = IntNode98;
+            ActionNode94_thumb = BoolNode71;
+            ActionNode94_index = BoolNode71;
+            ActionNode94_middle = BoolNode71;
+            ActionNode94_fourth = BoolNode71;
+            ActionNode94_fifth = BoolNode72;
+            // ActionNode
+            while (this.DebugInfo("c8c0d4ea-6be1-4006-8d4c-bb543da69e05","0d50941c-2b1d-48a3-a8ff-57b87e24e585", this) == 1) yield return null;
+            // Visit GestureUtils.registerGesture
+            GestureUtils.registerGesture(ActionNode94_key, ActionNode94_thumb, ActionNode94_index, ActionNode94_middle, ActionNode94_fourth, ActionNode94_fifth);
+            ActionNode94_key = IntNode99;
+            ActionNode94_thumb = BoolNode72;
+            ActionNode94_index = BoolNode71;
+            ActionNode94_middle = BoolNode71;
+            ActionNode94_fourth = BoolNode71;
+            ActionNode94_fifth = BoolNode71;
+            // ActionNode
+            while (this.DebugInfo("0d50941c-2b1d-48a3-a8ff-57b87e24e585","7c4081ec-adad-40fa-b288-6ff6cb1fa8eb", this) == 1) yield return null;
+            // Visit GestureUtils.registerGesture
+            GestureUtils.registerGesture(ActionNode94_key, ActionNode94_thumb, ActionNode94_index, ActionNode94_middle, ActionNode94_fourth, ActionNode94_fifth);
+            ActionNode94_key = IntNode100;
+            ActionNode94_thumb = BoolNode71;
+            ActionNode94_index = BoolNode71;
+            ActionNode94_middle = BoolNode71;
+            ActionNode94_fourth = BoolNode71;
+            ActionNode94_fifth = BoolNode71;
+            // ActionNode
+            while (this.DebugInfo("7c4081ec-adad-40fa-b288-6ff6cb1fa8eb","e2e2a5d8-068c-4f90-b3e4-b798f25d684e", this) == 1) yield return null;
+            // Visit GestureUtils.registerGesture
+            GestureUtils.registerGesture(ActionNode94_key, ActionNode94_thumb, ActionNode94_index, ActionNode94_middle, ActionNode94_fourth, ActionNode94_fifth);
             // PublishEventNode
-            while (this.DebugInfo("c8c0d4ea-6be1-4006-8d4c-bb543da69e05","8cb82bb7-2d9d-452b-ba92-12398c02e1b6", this) == 1) yield return null;
+            while (this.DebugInfo("e2e2a5d8-068c-4f90-b3e4-b798f25d684e","8cb82bb7-2d9d-452b-ba92-12398c02e1b6", this) == 1) yield return null;
             var PublishEventNode81_Event = new GestureUpdateEvent();
             System.Publish(PublishEventNode81_Event);
             PublishEventNode81_Result = PublishEventNode81_Event;
