@@ -55,6 +55,14 @@ namespace TetrisDB {
         
         private TetrisDB.ActiveGroupMoveLeftEvent PublishEventNode79_Result = default( TetrisDB.ActiveGroupMoveLeftEvent );
         
+        private object ActionNode95_key = default( System.Object );
+        
+        private int IntNode96 = 1;
+        
+        private Leap.Hand ActionNode95_hand = default( Leap.Hand );
+        
+        private TetrisDB.ActiveGroupMoveRightEvent PublishEventNode97_Result = default( TetrisDB.ActiveGroupMoveRightEvent );
+        
         public TetrisDB.GestureUpdateEvent Event {
             get {
                 return _Event;
@@ -126,7 +134,26 @@ namespace TetrisDB {
             yield break;
         }
         
+        private System.Collections.IEnumerator ActionNode95_yes() {
+            // PublishEventNode
+            while (this.DebugInfo("db0af062-d542-4854-a60c-b068a25e1c72","d4ff7afc-1470-468b-9368-2b995ecd3bae", this) == 1) yield return null;
+            var PublishEventNode97_Event = new ActiveGroupMoveRightEvent();
+            System.Publish(PublishEventNode97_Event);
+            PublishEventNode97_Result = PublishEventNode97_Event;
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode95_no() {
+            yield break;
+        }
+        
         private System.Collections.IEnumerator ActionNode77_no() {
+            ActionNode95_key = IntNode96;
+            ActionNode95_hand = ActionNode75_left;
+            // ActionNode
+            while (this.DebugInfo("b650c064-1158-4d64-b429-56d62b2c1f71","db0af062-d542-4854-a60c-b068a25e1c72", this) == 1) yield return null;
+            // Visit GestureUtils.isGestureSatisified
+            GestureUtils.isGestureSatisified(ActionNode95_key, ActionNode95_hand, ()=> { System.StartCoroutine(ActionNode95_yes()); }, ()=> { System.StartCoroutine(ActionNode95_no()); });
             yield break;
         }
         

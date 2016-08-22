@@ -42,6 +42,20 @@ namespace TetrisDB {
         
         private bool ActionNode70_fifth = default( System.Boolean );
         
+        private object ActionNode94_key = default( System.Object );
+        
+        private int IntNode91 = 1;
+        
+        private bool ActionNode94_thumb = default( System.Boolean );
+        
+        private bool ActionNode94_index = default( System.Boolean );
+        
+        private bool ActionNode94_middle = default( System.Boolean );
+        
+        private bool ActionNode94_fourth = default( System.Boolean );
+        
+        private bool ActionNode94_fifth = default( System.Boolean );
+        
         private TetrisDB.GestureUpdateEvent PublishEventNode81_Result = default( TetrisDB.GestureUpdateEvent );
         
         public uFrame.Kernel.GameReadyEvent Event {
@@ -73,8 +87,18 @@ namespace TetrisDB {
             while (this.DebugInfo("62601496-7546-4d76-abee-44aa4608e5bc","67b36efb-ac9d-427e-9d9c-512ac104e0cd", this) == 1) yield return null;
             // Visit GestureUtils.registerGesture
             GestureUtils.registerGesture(ActionNode70_key, ActionNode70_thumb, ActionNode70_index, ActionNode70_middle, ActionNode70_fourth, ActionNode70_fifth);
+            ActionNode94_key = IntNode91;
+            ActionNode94_thumb = BoolNode71;
+            ActionNode94_index = BoolNode71;
+            ActionNode94_middle = BoolNode72;
+            ActionNode94_fourth = BoolNode72;
+            ActionNode94_fifth = BoolNode72;
+            // ActionNode
+            while (this.DebugInfo("67b36efb-ac9d-427e-9d9c-512ac104e0cd","c8c0d4ea-6be1-4006-8d4c-bb543da69e05", this) == 1) yield return null;
+            // Visit GestureUtils.registerGesture
+            GestureUtils.registerGesture(ActionNode94_key, ActionNode94_thumb, ActionNode94_index, ActionNode94_middle, ActionNode94_fourth, ActionNode94_fifth);
             // PublishEventNode
-            while (this.DebugInfo("67b36efb-ac9d-427e-9d9c-512ac104e0cd","8cb82bb7-2d9d-452b-ba92-12398c02e1b6", this) == 1) yield return null;
+            while (this.DebugInfo("c8c0d4ea-6be1-4006-8d4c-bb543da69e05","8cb82bb7-2d9d-452b-ba92-12398c02e1b6", this) == 1) yield return null;
             var PublishEventNode81_Event = new GestureUpdateEvent();
             System.Publish(PublishEventNode81_Event);
             PublishEventNode81_Result = PublishEventNode81_Event;
