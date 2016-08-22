@@ -1,8 +1,0 @@
-{
-	"Identifier":"3c0997b2-41f8-4087-a3b3-62ab6cbda502"	, 
-	"Time":"7/17/2016 10:16:24 PM"	, 
-	"Group":221624	, 
-	"DataRecordId":"39322652-d3d8-47d2-8ac0-a3a35c8e4d92"	, 
-	"Type":1	, 
-	"RecordType":"Invert.Core.GraphDesigner.FilterStackItem, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"Identifier\":\"39322652-d3d8-47d2-8ac0-a3a35c8e4d92\"\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"FilterId\":\"dfb8bf7e-4bf9-41b1-90a6-3c773eb996e9\"\t, \r\n\t\"Index\":1}\r\n"}
