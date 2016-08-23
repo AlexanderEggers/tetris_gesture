@@ -98,6 +98,34 @@ namespace TetrisDB {
         
         private bool ActionNode114_fifth = default( System.Boolean );
         
+        private object ActionNode132_key = default( System.Object );
+        
+        private int IntNode133 = 5;
+        
+        private bool ActionNode132_thumb = default( System.Boolean );
+        
+        private bool ActionNode132_index = default( System.Boolean );
+        
+        private bool ActionNode132_middle = default( System.Boolean );
+        
+        private bool ActionNode132_fourth = default( System.Boolean );
+        
+        private bool ActionNode132_fifth = default( System.Boolean );
+        
+        private object ActionNode135_key = default( System.Object );
+        
+        private int IntNode136 = 6;
+        
+        private bool ActionNode135_thumb = default( System.Boolean );
+        
+        private bool ActionNode135_index = default( System.Boolean );
+        
+        private bool ActionNode135_middle = default( System.Boolean );
+        
+        private bool ActionNode135_fourth = default( System.Boolean );
+        
+        private bool ActionNode135_fifth = default( System.Boolean );
+        
         private TetrisDB.GestureUpdateEvent PublishEventNode81_Result = default( TetrisDB.GestureUpdateEvent );
         
         public uFrame.Kernel.GameReadyEvent Event {
@@ -169,8 +197,28 @@ namespace TetrisDB {
             while (this.DebugInfo("9cea2b15-4c88-40eb-bdd1-1809bf5c3dbb","1e79d8a3-b784-4dfb-baa0-cd189321711f", this) == 1) yield return null;
             // Visit GestureUtils.registerGesture
             GestureUtils.registerGesture(ActionNode114_key, ActionNode114_thumb, ActionNode114_index, ActionNode114_middle, ActionNode114_fourth, ActionNode114_fifth);
+            ActionNode132_key = IntNode133;
+            ActionNode132_thumb = BoolNode72;
+            ActionNode132_index = BoolNode71;
+            ActionNode132_middle = BoolNode72;
+            ActionNode132_fourth = BoolNode72;
+            ActionNode132_fifth = BoolNode72;
+            // ActionNode
+            while (this.DebugInfo("1e79d8a3-b784-4dfb-baa0-cd189321711f","cc652384-a7b9-4580-9456-bca1c4243fc7", this) == 1) yield return null;
+            // Visit GestureUtils.registerGesture
+            GestureUtils.registerGesture(ActionNode132_key, ActionNode132_thumb, ActionNode132_index, ActionNode132_middle, ActionNode132_fourth, ActionNode132_fifth);
+            ActionNode135_key = IntNode136;
+            ActionNode135_thumb = BoolNode72;
+            ActionNode135_index = BoolNode71;
+            ActionNode135_middle = BoolNode71;
+            ActionNode135_fourth = BoolNode72;
+            ActionNode135_fifth = BoolNode72;
+            // ActionNode
+            while (this.DebugInfo("cc652384-a7b9-4580-9456-bca1c4243fc7","307f959d-2914-4aa7-b056-e224e1654c12", this) == 1) yield return null;
+            // Visit GestureUtils.registerGesture
+            GestureUtils.registerGesture(ActionNode135_key, ActionNode135_thumb, ActionNode135_index, ActionNode135_middle, ActionNode135_fourth, ActionNode135_fifth);
             // PublishEventNode
-            while (this.DebugInfo("1e79d8a3-b784-4dfb-baa0-cd189321711f","8cb82bb7-2d9d-452b-ba92-12398c02e1b6", this) == 1) yield return null;
+            while (this.DebugInfo("307f959d-2914-4aa7-b056-e224e1654c12","8cb82bb7-2d9d-452b-ba92-12398c02e1b6", this) == 1) yield return null;
             var PublishEventNode81_Event = new GestureUpdateEvent();
             System.Publish(PublishEventNode81_Event);
             PublishEventNode81_Result = PublishEventNode81_Event;

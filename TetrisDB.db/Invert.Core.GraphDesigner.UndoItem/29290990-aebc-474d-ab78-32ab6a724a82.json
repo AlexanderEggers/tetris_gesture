@@ -1,0 +1,8 @@
+{
+	"Identifier":"29290990-aebc-474d-ab78-32ab6a724a82"	, 
+	"Time":"8/23/2016 3:00:53 PM"	, 
+	"Group":15053	, 
+	"DataRecordId":"c87e12ae-0bf2-4efa-887f-9ac8a5762e7f"	, 
+	"Type":0	, 
+	"RecordType":"Invert.uFrame.ECS.ActionNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
+	"Data":"{\r\n\t\"MetaType\":\"uFrame.Actions.DebugLibrary.LogMessage\"\t, \r\n\t\"VariableName\":\"ActionNode143\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"c87e12ae-0bf2-4efa-887f-9ac8a5762e7f\"\t, \r\n\t\"Expanded\":false}\r\n"}
