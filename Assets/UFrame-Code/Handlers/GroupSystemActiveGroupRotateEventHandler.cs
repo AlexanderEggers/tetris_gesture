@@ -31,6 +31,10 @@ namespace TetrisDB {
         
         private TetrisDB.GroupComponent ActionNode66_component = default( TetrisDB.GroupComponent );
         
+        private object ActionNode125_message = default( System.Object );
+        
+        private string StringNode126 = "rotate";
+        
         public TetrisDB.ActiveGroupRotateEvent Event {
             get {
                 return _Event;
@@ -55,6 +59,11 @@ namespace TetrisDB {
             while (this.DebugInfo("8cb82bb7-2d9d-452b-ba92-12398c02e1b6","542028e0-4e42-43d3-887e-68fdf506858a", this) == 1) yield return null;
             // Visit uFrame.Actions.Comparisons.IsTrue
             uFrame.Actions.Comparisons.IsTrue(ActionNode65_value, ()=> { System.StartCoroutine(ActionNode65_yes()); }, ()=> { System.StartCoroutine(ActionNode65_no()); });
+            ActionNode125_message = StringNode126;
+            // ActionNode
+            while (this.DebugInfo("aec7e0d2-50fc-4fc5-82de-67f1cecfdaa0","b2ad6fce-fbce-434c-85b3-e9976fbed7a4", this) == 1) yield return null;
+            // Visit uFrame.Actions.DebugLibrary.LogMessage
+            uFrame.Actions.DebugLibrary.LogMessage(ActionNode125_message);
             yield break;
         }
         

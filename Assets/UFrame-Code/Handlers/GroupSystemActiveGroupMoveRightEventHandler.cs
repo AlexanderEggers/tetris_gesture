@@ -31,6 +31,10 @@ namespace TetrisDB {
         
         private TetrisDB.GroupComponent ActionNode57_component = default( TetrisDB.GroupComponent );
         
+        private object ActionNode121_message = default( System.Object );
+        
+        private string StringNode122 = "move right";
+        
         public TetrisDB.ActiveGroupMoveRightEvent Event {
             get {
                 return _Event;
@@ -52,9 +56,14 @@ namespace TetrisDB {
         public virtual System.Collections.IEnumerator Execute() {
             ActionNode59_value = Group.isActive;
             // ActionNode
-            while (this.DebugInfo("122fe647-8507-4148-a878-4d8671376ddc","c106d901-8085-4995-8e51-1204e30ca6bd", this) == 1) yield return null;
+            while (this.DebugInfo("c4db65f6-2521-4ee9-96de-74990e6603b8","c106d901-8085-4995-8e51-1204e30ca6bd", this) == 1) yield return null;
             // Visit uFrame.Actions.Comparisons.IsTrue
             uFrame.Actions.Comparisons.IsTrue(ActionNode59_value, ()=> { System.StartCoroutine(ActionNode59_yes()); }, ()=> { System.StartCoroutine(ActionNode59_no()); });
+            ActionNode121_message = StringNode122;
+            // ActionNode
+            while (this.DebugInfo("62601496-7546-4d76-abee-44aa4608e5bc","a876787c-d3b6-43dc-9673-ca5866291deb", this) == 1) yield return null;
+            // Visit uFrame.Actions.DebugLibrary.LogMessage
+            uFrame.Actions.DebugLibrary.LogMessage(ActionNode121_message);
             yield break;
         }
         

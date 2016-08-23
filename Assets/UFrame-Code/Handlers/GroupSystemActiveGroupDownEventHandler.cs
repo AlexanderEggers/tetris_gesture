@@ -35,6 +35,10 @@ namespace TetrisDB {
         
         private TetrisDB.GroupShouldSpawnEvent PublishEventNode34_Result = default( TetrisDB.GroupShouldSpawnEvent );
         
+        private object ActionNode123_message = default( System.Object );
+        
+        private string StringNode124 = "move down";
+        
         public TetrisDB.ActiveGroupDownEvent Event {
             get {
                 return _Event;
@@ -59,6 +63,11 @@ namespace TetrisDB {
             while (this.DebugInfo("47a3ddfd-a596-4bbc-a393-65247444076c","4de3e048-ca66-4a45-9aa1-25a070acd515", this) == 1) yield return null;
             // Visit uFrame.Actions.Comparisons.IsTrue
             uFrame.Actions.Comparisons.IsTrue(ActionNode61_value, ()=> { System.StartCoroutine(ActionNode61_yes()); }, ()=> { System.StartCoroutine(ActionNode61_no()); });
+            ActionNode123_message = StringNode124;
+            // ActionNode
+            while (this.DebugInfo("07bbc684-5d71-4a13-bed3-85b36cb8a326","d3c2b90e-db35-4915-8fcb-8daaeb4e206e", this) == 1) yield return null;
+            // Visit uFrame.Actions.DebugLibrary.LogMessage
+            uFrame.Actions.DebugLibrary.LogMessage(ActionNode123_message);
             yield break;
         }
         
