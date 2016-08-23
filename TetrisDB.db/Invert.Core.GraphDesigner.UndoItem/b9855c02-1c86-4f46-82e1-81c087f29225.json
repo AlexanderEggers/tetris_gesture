@@ -1,8 +1,0 @@
-{
-	"Identifier":"b9855c02-1c86-4f46-82e1-81c087f29225"	, 
-	"Time":"8/23/2016 4:25:47 PM"	, 
-	"Group":162547	, 
-	"DataRecordId":"3f6df7b7-6f60-49de-b29f-9a23e23226d2"	, 
-	"Type":1	, 
-	"RecordType":"Invert.uFrame.ECS.ActionNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"MetaType\":\"uFrame.Actions.DebugLibrary.LogMessage\"\t, \r\n\t\"VariableName\":\"ActionNode168\"\t, \r\n\t\"Name\":\"NewActionNode\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"3f6df7b7-6f60-49de-b29f-9a23e23226d2\"\t, \r\n\t\"Expanded\":false}\r\n"}
