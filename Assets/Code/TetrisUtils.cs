@@ -94,7 +94,7 @@ public static class TetrisUtils {
         }
     }
 
-    private static bool isValidGridPos(GroupComponent component)
+    public static bool isValidGridPos(GroupComponent component)
     {
         foreach (Transform child in component.transform)
         {

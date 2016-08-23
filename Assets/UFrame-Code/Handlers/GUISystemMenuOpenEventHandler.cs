@@ -54,7 +54,7 @@ namespace TetrisDB {
             ActionNode154_obj = Group.gameObject;
             ActionNode154_state = BoolNode156;
             // ActionNode
-            while (this.DebugInfo("63a4eb4a-bf6a-420c-b283-f294fcb6f703","d71fc2ae-16f0-41d1-af16-88375cbe2dab", this) == 1) yield return null;
+            while (this.DebugInfo("","d71fc2ae-16f0-41d1-af16-88375cbe2dab", this) == 1) yield return null;
             // Visit GameObjectUtils.setActive
             GameObjectUtils.setActive(ActionNode154_obj, ActionNode154_state);
             // ActionNode

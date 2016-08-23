@@ -198,8 +198,8 @@ namespace TetrisDB {
             // Visit GestureUtils.registerGesture
             GestureUtils.registerGesture(ActionNode114_key, ActionNode114_thumb, ActionNode114_index, ActionNode114_middle, ActionNode114_fourth, ActionNode114_fifth);
             ActionNode132_key = IntNode133;
-            ActionNode132_thumb = BoolNode72;
-            ActionNode132_index = BoolNode71;
+            ActionNode132_thumb = BoolNode71;
+            ActionNode132_index = BoolNode72;
             ActionNode132_middle = BoolNode72;
             ActionNode132_fourth = BoolNode72;
             ActionNode132_fifth = BoolNode72;

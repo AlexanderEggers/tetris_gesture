@@ -28,9 +28,8 @@ public class GridUtil
                 --y;
                 points++;
                 GameObject _canvas = GameObject.Find("Canvas");
-                Text _childText = _canvas.transform.FindChild("Points_Text").GetComponent<Text>();
-                _childText.text = "Points: " + points;
-                Debug.Log("Points: " + points);
+                Text _childText = _canvas.transform.FindChild("Border_Panel_Left").FindChild("Points_Text").GetComponent<Text>();
+                _childText.text = "Lines: " + points;
             }
         }
     }
