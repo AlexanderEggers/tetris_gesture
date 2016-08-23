@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class GridUtil
 {
     private static int points;
+    public static bool gameIsPaused;
 
     // The Grid itself
     public static int w = 10;

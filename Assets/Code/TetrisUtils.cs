@@ -8,60 +8,73 @@ public static class TetrisUtils {
     
 	public static void Update(GroupComponent component, Action yes, Action no)
     {
-        //Vector3 pos = component.transform.position;
-        component.transform.position += new Vector3(0, -1, 0);
+        if(!GridUtil.gameIsPaused)
+        {
+            //Vector3 pos = component.transform.position;
+            component.transform.position += new Vector3(0, -1, 0);
 
-        if(isValidGridPos(component))
-        {
-            updateGrid(component);
-        } else
-        {
-            component.transform.position += new Vector3(0, 1, 0);
-            GridUtil.deleteFullRows();
-            yes.Invoke();
-            return;
+            if (isValidGridPos(component))
+            {
+                updateGrid(component);
+            }
+            else
+            {
+                component.transform.position += new Vector3(0, 1, 0);
+                GridUtil.deleteFullRows();
+                yes.Invoke();
+                return;
+            }
+
+            no.Invoke();
         }
-
-        no.Invoke();
     }
 
     public static void TryMoveLeft(GroupComponent component)
     {
-        component.transform.position += new Vector3(-1, 0, 0);
+        if (!GridUtil.gameIsPaused)
+        {
+            component.transform.position += new Vector3(-1, 0, 0);
 
-        // See if valid
-        if (isValidGridPos(component))
-            // It's valid. Update grid.
-            updateGrid(component);
-        else
-            // It's not valid. revert.
-            component.transform.position += new Vector3(1, 0, 0);
+            // See if valid
+            if (isValidGridPos(component))
+                // It's valid. Update grid.
+                updateGrid(component);
+            else
+                // It's not valid. revert.
+                component.transform.position += new Vector3(1, 0, 0);
+        }
     }
 
     public static void TryMoveRight(GroupComponent component)
     {
-        component.transform.position += new Vector3(1, 0, 0);
+        if (!GridUtil.gameIsPaused)
+        {
+            component.transform.position += new Vector3(1, 0, 0);
 
-        // See if valid
-        if (isValidGridPos(component))
-            // It's valid. Update grid.
-            updateGrid(component);
-        else
-            // It's not valid. revert.
-            component.transform.position += new Vector3(-1, 0, 0);
+            // See if valid
+            if (isValidGridPos(component))
+                // It's valid. Update grid.
+                updateGrid(component);
+            else
+                // It's not valid. revert.
+                component.transform.position += new Vector3(-1, 0, 0);
+        }
     }
 
     public static void TryRotate(GroupComponent component)
     {
-        component.transform.Rotate(0, 0, -90);
+        if (!GridUtil.gameIsPaused)
+        {
+            component.transform.Rotate(0, 0, -90);
 
-        // See if valid
-        if (isValidGridPos(component))
-            // It's valid. Update grid.
-            updateGrid(component);
-        else
-            // It's not valid. revert.
-            component.transform.Rotate(0, 0, 90);
+            // See if valid
+            if (isValidGridPos(component))
+                // It's valid. Update grid.
+                updateGrid(component);
+            else
+                // It's not valid. revert.
+                component.transform.Rotate(0, 0, 90);
+        }
     }
 
     private static void updateGrid(GroupComponent component)

@@ -32,8 +32,6 @@ namespace TetrisDB {
         
         private string StringNode167 = "exit game";
         
-        private object ActionNode168_message = default( System.Object );
-        
         public TetrisDB.GameExitEvent Event {
             get {
                 return _Event;
@@ -58,11 +56,6 @@ namespace TetrisDB {
             while (this.DebugInfo("cd61b2c4-389e-4936-bd8e-cd6af0ea41c0","236ef81c-ed44-4036-8bd4-a83a144844a0", this) == 1) yield return null;
             // Visit uFrame.Actions.Comparisons.IsTrue
             uFrame.Actions.Comparisons.IsTrue(ActionNode162_value, ()=> { System.StartCoroutine(ActionNode162_yes()); }, ()=> { System.StartCoroutine(ActionNode162_no()); });
-            ActionNode168_message = Group.isVisible;
-            // ActionNode
-            while (this.DebugInfo("af030e73-3de9-46df-8d4a-9f69b6ec85ae","3f6df7b7-6f60-49de-b29f-9a23e23226d2", this) == 1) yield return null;
-            // Visit uFrame.Actions.DebugLibrary.LogMessage
-            uFrame.Actions.DebugLibrary.LogMessage(ActionNode168_message);
             yield break;
         }
         

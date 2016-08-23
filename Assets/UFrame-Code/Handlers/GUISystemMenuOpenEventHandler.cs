@@ -54,11 +54,15 @@ namespace TetrisDB {
             ActionNode154_obj = Group.gameObject;
             ActionNode154_state = BoolNode156;
             // ActionNode
-            while (this.DebugInfo("","d71fc2ae-16f0-41d1-af16-88375cbe2dab", this) == 1) yield return null;
+            while (this.DebugInfo("63a4eb4a-bf6a-420c-b283-f294fcb6f703","d71fc2ae-16f0-41d1-af16-88375cbe2dab", this) == 1) yield return null;
             // Visit GameObjectUtils.setActive
             GameObjectUtils.setActive(ActionNode154_obj, ActionNode154_state);
+            // ActionNode
+            while (this.DebugInfo("d71fc2ae-16f0-41d1-af16-88375cbe2dab","734a2d75-25f8-4a85-8050-eecccaecf737", this) == 1) yield return null;
+            // Visit GUIUtil.OpenMenu
+            GUIUtil.OpenMenu();
             // SetVariableNode
-            while (this.DebugInfo("d71fc2ae-16f0-41d1-af16-88375cbe2dab","13f67d59-c7bd-4904-a080-15ea16f8fcf6", this) == 1) yield return null;
+            while (this.DebugInfo("734a2d75-25f8-4a85-8050-eecccaecf737","13f67d59-c7bd-4904-a080-15ea16f8fcf6", this) == 1) yield return null;
             Group.isVisible = (System.Boolean)BoolNode156;
             yield break;
         }

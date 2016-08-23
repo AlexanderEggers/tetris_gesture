@@ -1,8 +1,0 @@
-{
-	"Identifier":"cf17e7c8-f81c-4abc-9d7e-0bf7608cf2fb"	, 
-	"Time":"8/23/2016 4:04:20 PM"	, 
-	"Group":16420	, 
-	"DataRecordId":"cb5d2297-f4fb-4a8e-bffd-5a63dcc1b0d9"	, 
-	"Type":1	, 
-	"RecordType":"Invert.uFrame.ECS.VariableSelection, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"Identifier\":\"cb5d2297-f4fb-4a8e-bffd-5a63dcc1b0d9\"\t, \r\n\t\"NodeId\":\"db565d55-eccc-466d-9784-0da831624639\"\t, \r\n\t\"ItemId\":\"db565d55-eccc-466d-9784-0da831624639:Object\"\t, \r\n\t\"ValueId\":\"4025bbe6-2f08-474d-87f0-0d3fb9756bda:Group\"}\r\n"}

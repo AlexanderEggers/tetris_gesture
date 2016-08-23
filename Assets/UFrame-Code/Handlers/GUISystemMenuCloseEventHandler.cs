@@ -57,8 +57,12 @@ namespace TetrisDB {
             while (this.DebugInfo("fa8d044e-dfc4-489d-a365-7c4b08bc0a19","214a8a05-5f19-40a6-8659-3bb971dc58c0", this) == 1) yield return null;
             // Visit GameObjectUtils.setActive
             GameObjectUtils.setActive(ActionNode157_obj, ActionNode157_state);
+            // ActionNode
+            while (this.DebugInfo("214a8a05-5f19-40a6-8659-3bb971dc58c0","b760011d-5ce6-4991-82c8-74bbccd1f706", this) == 1) yield return null;
+            // Visit GUIUtil.CloseMenu
+            GUIUtil.CloseMenu();
             // SetVariableNode
-            while (this.DebugInfo("214a8a05-5f19-40a6-8659-3bb971dc58c0","afbc5001-5e11-44c9-bc89-603a26360905", this) == 1) yield return null;
+            while (this.DebugInfo("b760011d-5ce6-4991-82c8-74bbccd1f706","afbc5001-5e11-44c9-bc89-603a26360905", this) == 1) yield return null;
             Group.isVisible = (System.Boolean)BoolNode158;
             yield break;
         }
