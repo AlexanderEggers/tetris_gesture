@@ -41,9 +41,9 @@ namespace TetrisDB {
         
         private object ActionNode76_toCheck = default( System.Object );
         
-        private object ActionNode118_message = default( System.Object );
+        private TetrisDB.HandInvisibleEvent PublishEventNode182_Result = default( TetrisDB.HandInvisibleEvent );
         
-        private string StringNode101 = "hand not visible";
+        private TetrisDB.HandVisibleEvent PublishEventNode183_Result = default( TetrisDB.HandVisibleEvent );
         
         private object ActionNode77_key = default( System.Object );
         
@@ -77,6 +77,30 @@ namespace TetrisDB {
         
         private TetrisDB.ActiveGroupDownEvent PublishEventNode117_Result = default( TetrisDB.ActiveGroupDownEvent );
         
+        private object ActionNode128_key = default( System.Object );
+        
+        private int IntNode129 = 4;
+        
+        private Leap.Hand ActionNode128_hand = default( Leap.Hand );
+        
+        private TetrisDB.MenuOpenEvent PublishEventNode148_Result = default( TetrisDB.MenuOpenEvent );
+        
+        private object ActionNode137_key = default( System.Object );
+        
+        private int IntNode138 = 5;
+        
+        private Leap.Hand ActionNode137_hand = default( Leap.Hand );
+        
+        private TetrisDB.MenuCloseEvent PublishEventNode149_Result = default( TetrisDB.MenuCloseEvent );
+        
+        private object ActionNode141_key = default( System.Object );
+        
+        private int IntNode142 = 6;
+        
+        private Leap.Hand ActionNode141_hand = default( Leap.Hand );
+        
+        private TetrisDB.GameExitEvent PublishEventNode150_Result = default( TetrisDB.GameExitEvent );
+        
         public TetrisDB.GestureUpdateEvent Event {
             get {
                 return _Event;
@@ -98,7 +122,7 @@ namespace TetrisDB {
         public virtual System.Collections.IEnumerator Execute() {
             ActionNode127_Milliseconds = IntNode83;
             // ActionNode
-            while (this.DebugInfo("e3f5e492-b904-4a14-8c5a-b773be0bbca3","d9eb14db-b5db-40c3-bd01-a36f90258104", this) == 1) yield return null;
+            while (this.DebugInfo("bf1a89a3-98e0-4803-b7a0-808be2646fd3","d9eb14db-b5db-40c3-bd01-a36f90258104", this) == 1) yield return null;
             // Visit uFrame.Actions.MillitTimer
             ActionNode127.Milliseconds = ActionNode127_Milliseconds;
             ActionNode127.System = System;
@@ -131,11 +155,11 @@ namespace TetrisDB {
         }
         
         private System.Collections.IEnumerator ActionNode76_yes() {
-            ActionNode118_message = StringNode101;
-            // ActionNode
-            while (this.DebugInfo("222aae32-7144-4f27-8cfc-34f6ccaad846","1120e85c-6d10-419f-b9e2-7492e2f690a4", this) == 1) yield return null;
-            // Visit uFrame.Actions.DebugLibrary.LogMessage
-            uFrame.Actions.DebugLibrary.LogMessage(ActionNode118_message);
+            // PublishEventNode
+            while (this.DebugInfo("222aae32-7144-4f27-8cfc-34f6ccaad846","d2ac992c-2c35-421f-af1e-a9c12500ef9e", this) == 1) yield return null;
+            var PublishEventNode182_Event = new HandInvisibleEvent();
+            System.Publish(PublishEventNode182_Event);
+            PublishEventNode182_Result = PublishEventNode182_Event;
             yield break;
         }
         
@@ -175,7 +199,64 @@ namespace TetrisDB {
             yield break;
         }
         
+        private System.Collections.IEnumerator ActionNode128_yes() {
+            // PublishEventNode
+            while (this.DebugInfo("e59a3bb6-2d85-4c93-9deb-c7263b07b692","124cdb4f-9a72-4b51-b8e6-e3b686410614", this) == 1) yield return null;
+            var PublishEventNode148_Event = new MenuOpenEvent();
+            System.Publish(PublishEventNode148_Event);
+            PublishEventNode148_Result = PublishEventNode148_Event;
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode137_yes() {
+            // PublishEventNode
+            while (this.DebugInfo("9c14444c-0151-4c06-b9f3-87828a85ea9c","696d1bc1-8d07-46d6-91dc-3e9f9095fbee", this) == 1) yield return null;
+            var PublishEventNode149_Event = new MenuCloseEvent();
+            System.Publish(PublishEventNode149_Event);
+            PublishEventNode149_Result = PublishEventNode149_Event;
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode141_yes() {
+            // PublishEventNode
+            while (this.DebugInfo("4f297f36-e4f7-4b4c-8e45-0804865a2c10","7189f257-b99a-4dea-a522-7948a385c9de", this) == 1) yield return null;
+            var PublishEventNode150_Event = new GameExitEvent();
+            System.Publish(PublishEventNode150_Event);
+            PublishEventNode150_Result = PublishEventNode150_Event;
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode141_no() {
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode137_no() {
+            ActionNode141_key = IntNode142;
+            ActionNode141_hand = ActionNode75_left;
+            // ActionNode
+            while (this.DebugInfo("696d1bc1-8d07-46d6-91dc-3e9f9095fbee","4f297f36-e4f7-4b4c-8e45-0804865a2c10", this) == 1) yield return null;
+            // Visit GestureUtils.isGestureSatisified
+            GestureUtils.isGestureSatisified(ActionNode141_key, ActionNode141_hand, ()=> { System.StartCoroutine(ActionNode141_yes()); }, ()=> { System.StartCoroutine(ActionNode141_no()); });
+            yield break;
+        }
+        
+        private System.Collections.IEnumerator ActionNode128_no() {
+            ActionNode137_key = IntNode138;
+            ActionNode137_hand = ActionNode75_left;
+            // ActionNode
+            while (this.DebugInfo("124cdb4f-9a72-4b51-b8e6-e3b686410614","9c14444c-0151-4c06-b9f3-87828a85ea9c", this) == 1) yield return null;
+            // Visit GestureUtils.isGestureSatisified
+            GestureUtils.isGestureSatisified(ActionNode137_key, ActionNode137_hand, ()=> { System.StartCoroutine(ActionNode137_yes()); }, ()=> { System.StartCoroutine(ActionNode137_no()); });
+            yield break;
+        }
+        
         private System.Collections.IEnumerator ActionNode120_no() {
+            ActionNode128_key = IntNode129;
+            ActionNode128_hand = ActionNode75_left;
+            // ActionNode
+            while (this.DebugInfo("c4db65f6-2521-4ee9-96de-74990e6603b8","e59a3bb6-2d85-4c93-9deb-c7263b07b692", this) == 1) yield return null;
+            // Visit GestureUtils.isGestureSatisified
+            GestureUtils.isGestureSatisified(ActionNode128_key, ActionNode128_hand, ()=> { System.StartCoroutine(ActionNode128_yes()); }, ()=> { System.StartCoroutine(ActionNode128_no()); });
             yield break;
         }
         
@@ -210,10 +291,15 @@ namespace TetrisDB {
         }
         
         private System.Collections.IEnumerator ActionNode76_no() {
+            // PublishEventNode
+            while (this.DebugInfo("d2ac992c-2c35-421f-af1e-a9c12500ef9e","bf6405b3-8cb0-4225-9caf-42c5d45efbe8", this) == 1) yield return null;
+            var PublishEventNode183_Event = new HandVisibleEvent();
+            System.Publish(PublishEventNode183_Event);
+            PublishEventNode183_Result = PublishEventNode183_Event;
             ActionNode77_key = IntNode85;
             ActionNode77_hand = ActionNode75_left;
             // ActionNode
-            while (this.DebugInfo("1120e85c-6d10-419f-b9e2-7492e2f690a4","2e85193b-7f96-4150-a0cd-ed5a3e0a5015", this) == 1) yield return null;
+            while (this.DebugInfo("bf6405b3-8cb0-4225-9caf-42c5d45efbe8","2e85193b-7f96-4150-a0cd-ed5a3e0a5015", this) == 1) yield return null;
             // Visit GestureUtils.isGestureSatisified
             GestureUtils.isGestureSatisified(ActionNode77_key, ActionNode77_hand, ()=> { System.StartCoroutine(ActionNode77_yes()); }, ()=> { System.StartCoroutine(ActionNode77_no()); });
             yield break;

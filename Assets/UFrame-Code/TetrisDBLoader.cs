@@ -24,6 +24,7 @@ namespace TetrisDB {
             system = this.AddSystem<GestureInputSystem>();
             system = this.AddSystem<SpawnEvent>();
             system = this.AddSystem<InputSystem>();
+            system = this.AddSystem<GUISystem>();
             system = this.AddSystem<GroupSystem>();
         }
     }

@@ -23,8 +23,29 @@ static
         
         #region 
 static
+        public uFrame.ECS.IEcsComponentManagerOf<MenuComponent> MenuComponentManager(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<MenuComponent>();
+        }
+        #endregion
+        
+        #region 
+static
+        public uFrame.ECS.IEcsComponentManagerOf<RedLightComponent> RedLightComponentManager(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<RedLightComponent>();
+        }
+        #endregion
+        
+        #region 
+static
         public uFrame.ECS.IEcsComponentManagerOf<SpawnComponent> SpawnComponentManager(this uFrame.ECS.IEcsSystem system) {
             return system.ComponentSystem.RegisterComponent<SpawnComponent>();
+        }
+        #endregion
+        
+        #region 
+static
+        public uFrame.ECS.IEcsComponentManagerOf<GreenLightComponent> GreenLightComponentManager(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<GreenLightComponent>();
         }
         #endregion
         
@@ -37,8 +58,29 @@ static
         
         #region 
 static
+        public List<MenuComponent> MenuComponentComponents(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<MenuComponent>().Components;
+        }
+        #endregion
+        
+        #region 
+static
+        public List<RedLightComponent> RedLightComponentComponents(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<RedLightComponent>().Components;
+        }
+        #endregion
+        
+        #region 
+static
         public List<SpawnComponent> SpawnComponentComponents(this uFrame.ECS.IEcsSystem system) {
             return system.ComponentSystem.RegisterComponent<SpawnComponent>().Components;
+        }
+        #endregion
+        
+        #region 
+static
+        public List<GreenLightComponent> GreenLightComponentComponents(this uFrame.ECS.IEcsSystem system) {
+            return system.ComponentSystem.RegisterComponent<GreenLightComponent>().Components;
         }
         #endregion
         

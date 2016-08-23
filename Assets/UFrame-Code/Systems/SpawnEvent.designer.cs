@@ -22,9 +22,24 @@ namespace TetrisDB {
     
     public partial class SpawnEventBase : uFrame.ECS.EcsSystem {
         
+        private IEcsComponentManagerOf<MenuComponent> _MenuComponentManager;
+        
         private IEcsComponentManagerOf<GroupComponent> _GroupComponentManager;
         
+        private IEcsComponentManagerOf<GreenLightComponent> _GreenLightComponentManager;
+        
+        private IEcsComponentManagerOf<RedLightComponent> _RedLightComponentManager;
+        
         private IEcsComponentManagerOf<SpawnComponent> _SpawnComponentManager;
+        
+        public IEcsComponentManagerOf<MenuComponent> MenuComponentManager {
+            get {
+                return _MenuComponentManager;
+            }
+            set {
+                _MenuComponentManager = value;
+            }
+        }
         
         public IEcsComponentManagerOf<GroupComponent> GroupComponentManager {
             get {
@@ -32,6 +47,24 @@ namespace TetrisDB {
             }
             set {
                 _GroupComponentManager = value;
+            }
+        }
+        
+        public IEcsComponentManagerOf<GreenLightComponent> GreenLightComponentManager {
+            get {
+                return _GreenLightComponentManager;
+            }
+            set {
+                _GreenLightComponentManager = value;
+            }
+        }
+        
+        public IEcsComponentManagerOf<RedLightComponent> RedLightComponentManager {
+            get {
+                return _RedLightComponentManager;
+            }
+            set {
+                _RedLightComponentManager = value;
             }
         }
         
@@ -46,7 +79,10 @@ namespace TetrisDB {
         
         public override void Setup() {
             base.Setup();
+            MenuComponentManager = ComponentSystem.RegisterComponent<MenuComponent>(4);
             GroupComponentManager = ComponentSystem.RegisterComponent<GroupComponent>(3);
+            GreenLightComponentManager = ComponentSystem.RegisterComponent<GreenLightComponent>(7);
+            RedLightComponentManager = ComponentSystem.RegisterComponent<RedLightComponent>(8);
             SpawnComponentManager = ComponentSystem.RegisterComponent<SpawnComponent>(1);
             this.OnEvent<TetrisDB.GroupShouldSpawnEvent>().Subscribe(_=>{ SpawnEventGroupShouldSpawnEventFilter(_); }).DisposeWith(this);
             this.OnEvent<uFrame.Kernel.GameReadyEvent>().Subscribe(_=>{ SpawnEventGameReadyFilter(_); }).DisposeWith(this);
