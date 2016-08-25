@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using uFrame.Attributes;
-using UnityEngine.UI;
 
 [ActionLibrary, uFrameCategory("Tetris_GUI")]
 public static class GUIUtil {
@@ -17,8 +16,7 @@ public static class GUIUtil {
 
     public static void ExitGame()
     {
-        Time.timeScale = 0;
-        //TODO: Change to exit game later if application is being deployed
+        Application.Quit();
     }
 
     public static void LostGame()

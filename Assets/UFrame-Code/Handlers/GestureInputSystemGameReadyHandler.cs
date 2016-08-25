@@ -168,10 +168,10 @@ namespace TetrisDB {
             // Visit GestureUtils.registerGesture
             GestureUtils.registerGesture(ActionNode111_key, ActionNode111_thumb, ActionNode111_index, ActionNode111_middle, ActionNode111_fourth, ActionNode111_fifth);
             ActionNode112_key = IntNode107;
-            ActionNode112_thumb = BoolNode71;
+            ActionNode112_thumb = BoolNode72;
             ActionNode112_index = BoolNode71;
             ActionNode112_middle = BoolNode71;
-            ActionNode112_fourth = BoolNode71;
+            ActionNode112_fourth = BoolNode72;
             ActionNode112_fifth = BoolNode72;
             // ActionNode
             while (this.DebugInfo("7cf242e3-b774-4d20-945d-1759f3efa0c1","192e3404-a699-4f7b-8640-e2dfac68b774", this) == 1) yield return null;
@@ -182,7 +182,7 @@ namespace TetrisDB {
             ActionNode113_index = BoolNode71;
             ActionNode113_middle = BoolNode71;
             ActionNode113_fourth = BoolNode71;
-            ActionNode113_fifth = BoolNode71;
+            ActionNode113_fifth = BoolNode72;
             // ActionNode
             while (this.DebugInfo("192e3404-a699-4f7b-8640-e2dfac68b774","9cea2b15-4c88-40eb-bdd1-1809bf5c3dbb", this) == 1) yield return null;
             // Visit GestureUtils.registerGesture

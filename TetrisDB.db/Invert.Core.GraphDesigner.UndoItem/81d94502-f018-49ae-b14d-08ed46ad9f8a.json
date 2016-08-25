@@ -1,8 +1,0 @@
-{
-	"Identifier":"81d94502-f018-49ae-b14d-08ed46ad9f8a"	, 
-	"Time":"8/23/2016 9:20:12 PM"	, 
-	"Group":212012	, 
-	"DataRecordId":"3a9f56a3-cebb-49d0-847b-bf6c59d87585"	, 
-	"Type":1	, 
-	"RecordType":"Invert.uFrame.ECS.ActionNode, Assembly-CSharp-Editor-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"	, 
-	"Data":"{\r\n\t\"MetaType\":\"TetrisUtils.isValidGridPos\"\t, \r\n\t\"VariableName\":\"ActionNode188\"\t, \r\n\t\"Name\":\"NewActionNode\"\t, \r\n\t\"Order\":0\t, \r\n\t\"GraphId\":\"95814f79-b327-4885-bbc5-55d74445e968\"\t, \r\n\t\"Identifier\":\"3a9f56a3-cebb-49d0-847b-bf6c59d87585\"\t, \r\n\t\"Expanded\":false}\r\n"}
